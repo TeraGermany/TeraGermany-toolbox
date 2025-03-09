@@ -1,0 +1,22 @@
+{
+    "files": {
+        "index.js": "2210b719a84086b1c5ddfe72fca46abbb7bab0cb4aae6d683781d6da4e9a648b",
+        "module.json": "0ad86e05d443df898be9d07ba9cd0f42a5cf0858a231b6bb3682b6e5918b0735",
+        "lib/chat-sanitizer.js": "0117ffca404691539dbe041bfe9bc51b00aafa55d87f8053728231864491de72",
+        "lib/swim-fix.js": "30dadfa58eaa4057e41a6e5139f8f793da9b793885753356b120bdabeaeae12a",
+        "lib/gear-upgrade-crash-fix.js": "055519ebeefced10960340d53cfbed6b6fee8b2fc4b1ac5c32167a69bad707e5",
+        "lib/brooch-cd-fix.js": "dd7a34ed9949e253e17a732250bab9c57bd561b3167faab17fe250fa0e37ae70"
+    },
+    "defs": {
+        "S_CHAT": 3,
+        "S_WHISPER": 3,
+        "S_PRIVATE_CHAT": 1,
+        "S_RESULT_EQUIPMENT_INHERITANCE": 1,
+        "C_SHOW_ITEM_TOOLTIP_EX": 3,
+        "C_PLAYER_LOCATION": 5,
+        "S_ABNORMALITY_BEGIN": 4,
+        "S_ABNORMALITY_END": 1,
+        "S_START_COOLTIME_SKILL": 3,
+        "S_START_COOLTIME_ITEM": 1
+    }
+}

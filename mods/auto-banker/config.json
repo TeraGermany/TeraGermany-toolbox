@@ -1,0 +1,8 @@
+{
+    "version": 3,
+    "data": {
+        "blacklist": {},
+        "delay": 150,
+        "enabled": false
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "files": {
+        "README.md": "67fb7b9f995a6a93f25aef7ced885f3804df640dd8dd81fb8fd5c0d4dabf1c01",
+        "config_generator.js": "ae4a36436db7e9568de1cd6a02114d2861d509d986cdee60a956fc1c77e3a153",
+        "defs/C_PUT_WARE_ITEM.3.def": "14e81c44e0a046bd803d8b9f6dc45daf53789f209f70ebd949f90651b4f07f51",
+        "defs/S_VIEW_WARE_EX.2.def": "6065ae099533f68e0b31f1a625ee9659f35cf91c5f76e631496756bb24dc1a0b",
+        "index.js": "ea1a935f9a1a4a05175df378430feb046b34c8fad48eee6debee2ff9f3d44b34",
+        "module.json": "5500a9c5a915507f17c21a1c77b107dd84c19abccd088de9e17c970447648239"
+    }
+}

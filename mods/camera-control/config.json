@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "data": {
+        "shakeEnabled": true,
+        "shakePower": 1,
+        "shakeSpeed": 1,
+        "fovEnabled": false,
+        "fovValue": 71,
+        "distanceEnabled": false,
+        "distanceValue": 170
+    }
+}

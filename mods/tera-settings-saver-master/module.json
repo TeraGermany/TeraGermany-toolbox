@@ -1,0 +1,11 @@
+{
+    "disableAutoUpdate": false,
+    "servers": ["https://raw.githubusercontent.com/tera-private-mods/tera-settings-saver/master/"],
+    "supportUrl": "https://github.com/tera-toolbox-mods/Tera-Settings-Saver/issues",
+    "author": "Kasea",
+    "name": "tera-settings-saver",
+    "options": {
+        "guiName": "Setting saver"
+    },
+    "description": "Saves your settings"
+}

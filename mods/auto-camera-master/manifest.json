@@ -1,0 +1,13 @@
+{
+	"files": {
+		"config.json": {
+			"overwrite": false,
+			"hash": "07fa457fbcdd28a335c01c626dfe9ded722c9a560f8ba047c7cc055b68515572"
+		},
+		"index.js": "af6b584ea78adc38d7b30b39bde38c459697e452d4b54bae6764c69afbf14843",
+		"module.json": "cc9cef102907ad0d94c35bebdcf4bf80f4dc509191fbe9266f94367158887ee5"
+	},
+	"defs": {
+		"S_DUNGEON_CAMERA_SET": 1
+	}
+}
