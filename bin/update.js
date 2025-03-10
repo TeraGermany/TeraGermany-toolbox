@@ -45,18 +45,38 @@ function walkdir(dir, listFiles = true, listDirs = false, listRootDir = "") {
     return results;
 }
 
-let HTTPAgent = new http.Agent({
-    keepAlive: true
-});
-let HTTPSAgent = new https.Agent({
-    keepAlive: true
-});
-
 async function autoUpdateFile(file, filepath, url, drmKey, expectedHash = null, receiveAs = "buffer") {
+    let HTTPAgent = new http.Agent({
+        keepAlive: true
+    });
+    let HTTPSAgent = new https.Agent({
+        keepAlive: true,
+        rejectUnauthorized: false // temporary fix for Let's Encrypt certificate issues
+    });
+
     try {
         let fileUrl = new URL(url);
         if (drmKey)
             fileUrl.searchParams.append('drmkey', drmKey);
+
+        // Temp fix for unavailable raw.githubusercontent.com from some regions and counties
+        if (fileUrl.hostname === 'raw.githubusercontent.com') {
+            const ips = [
+                '185.199.108.133',
+                '185.199.109.133',
+                '185.199.111.133'
+            ];
+            const lookup = (_hostname, _options, callback) => callback(null, ips[Math.floor(Math.random() * ips.length)], 4);
+            HTTPAgent = new http.Agent({
+                keepAlive: true,
+                lookup
+            });
+            HTTPSAgent = new https.Agent({
+                keepAlive: true,
+                rejectUnauthorized: false, // temporary fix for Let's Encrypt certificate issues
+                lookup
+            });
+        }
 
         const requestPayload = await fetch(fileUrl, { "agent": (fileUrl.protocol === "https:") ? HTTPSAgent : HTTPAgent });
         if (!requestPayload.ok)
@@ -88,6 +108,7 @@ async function autoUpdateFile(file, filepath, url, drmKey, expectedHash = null, 
 function migrateModuleUpdateUrlRoot(update_url_root) {
     let finalUrlRoot = update_url_root;
     finalUrlRoot = finalUrlRoot.replace("Kaseaa", "Kasea");
+    finalUrlRoot = finalUrlRoot.replace("teramods.ml", "teragame.su");
 
     return finalUrlRoot;
 }
